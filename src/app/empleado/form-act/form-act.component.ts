@@ -3,6 +3,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { EmpleadoEntity } from '../model/empleado-entity';
 import { EmpleadoService } from '../servicio/empleado.service';
 import { Router } from '@angular/router';
+import { CargoEntity } from '../model/cargo-entity';
+import { SexoEntity } from '../model/sexo-entity';
 
 @Component({
   selector: 'app-form-act',
@@ -11,6 +13,8 @@ import { Router } from '@angular/router';
 })
 export class FormActComponent implements OnInit{
   empleado: EmpleadoEntity = new EmpleadoEntity();
+  cargo: CargoEntity = new CargoEntity();
+  sexo: SexoEntity = new SexoEntity();
 
   frmEmpleado = new FormGroup({
     id_empleado: new FormControl(''),
@@ -30,25 +34,27 @@ export class FormActComponent implements OnInit{
     this.llenarData();
   }
 
-  llenarData(){
+  llenarData() {
     this.empleadoService.obtenerEmpleado().subscribe(data => {
-      console.log(this.frmEmpleado.value);
       this.empleado = data;
-      this.frmEmpleado.controls['id_empleado'].setValue(""+this.empleado.id_empleado);
-      this.frmEmpleado.controls['nom_empleado'].setValue(this.empleado.nom_empleado);
-      this.frmEmpleado.controls['apl_empleado'].setValue(this.empleado.apl_empleado);
-      this.frmEmpleado.controls['edad_empleado'].setValue("" + this.empleado.edad_empleado);
-      this.frmEmpleado.controls['id_sexo'].setValue(""+this.empleado.id_sexo);
-      this.frmEmpleado.controls['dni_empleado'].setValue(this.empleado.dni_empleado);
-      this.frmEmpleado.controls['dir_empleado'].setValue(this.empleado.dir_empleado);
-      this.frmEmpleado.controls['id_cargo'].setValue(""+this.empleado.id_cargo);
-    })
+      this.frmEmpleado.patchValue({
+        id_empleado: this.empleado.id_empleado.toString(),
+        nom_empleado: this.empleado.nom_empleado,
+        apl_empleado: this.empleado.apl_empleado,
+        edad_empleado: this.empleado.edad_empleado.toString(),
+        id_sexo: this.empleado.id_sexo.toString(), // Convertir a cadena si es necesario
+        dni_empleado: this.empleado.dni_empleado,
+        dir_empleado: this.empleado.dir_empleado,
+        id_cargo: this.empleado.id_cargo.toString(), // Convertir a cadena si es necesario
+      });
+    });
   }
 
   guardarEmpleado(){
     this.empleadoService.actualizarEmpleado(this.frmEmpleado.value).subscribe(data => {
       this.frmEmpleado.reset();
       this.router.navigate(['listarEmpleado']);
+      console.log(data);
     })
   }
 

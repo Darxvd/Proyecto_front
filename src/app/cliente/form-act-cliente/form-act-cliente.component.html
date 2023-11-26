@@ -3,6 +3,13 @@
         <form [formGroup]="frmCliente" (ngSubmit)="guardarCliente()">
             <div>
                 <label class="form-label">
+                    codigo
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese codigo" name="id_cliente"
+                formControlName="id_cliente" readonly>
+            </div>
+            <div>
+                <label class="form-label">
                     Cliente
                 </label>
                 <input type="text" class="form-control" placeholder="Ingrese cliente" name="noap_cliente"

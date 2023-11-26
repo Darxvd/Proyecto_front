@@ -1,1 +1,25 @@
-<p>tabla-cliente works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Dni</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Acciones</th>
+        </tr>  
+    </thead>
+    <tbody>
+            <tr *ngFor="let elemento of data">
+                <th scope="row">{{elemento.id_cliente}}</th>
+                <td>{{elemento.noap_cliente}}</td>
+                <td>{{elemento.dni_cliente}}</td>
+                <td >{{elemento.tlf_cliente}}</td>
+                <td>
+                    <button class="btn btn-primary m-2"  (click)="actualizar(elemento.id_cliente)">Actualizar</button>
+                    <button class="btn btn-danger" (click)="eliminar(elemento.id_cliente)">Eliminar</button>
+                </td>
+            </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" (click)="nuevo()">Nuevo Cliente</button>
+
