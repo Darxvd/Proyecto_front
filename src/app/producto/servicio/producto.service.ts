@@ -8,20 +8,14 @@ import { Observable } from 'rxjs';
 export class ProductoService {
 
   codigo = 0;
-
-  private urlApiCategoria = 'categoria/listar';
-  /*private urlApiProveedor='proveedor/listar';*/
   private urlApiListar='producto/listar';
   private urlApiPost='producto/registrar';
+  private urlApiActualizar='producto/actualizar';
+  private urlApiObtener='producto/obtener/';
+  private urlApiEliminar='producto/eliminar/'
 
   constructor(private http: HttpClient) { }
 
-  public getCategoria(): Observable<any>{
-    return this.http.get<any>(this.urlApiCategoria);
-  } /*
-  public getProveedor(): Observable<any>{
-    return this.http.get<any>(this.urlApiProveedor);
-  } */
   public getProducto(): Observable<any>{
     return this.http.get<any>(this.urlApiListar);
   } 
@@ -29,4 +23,19 @@ export class ProductoService {
   public guardarDataProducto(data: any){
     return this.http.post(this.urlApiPost, data);
   }
+
+  public obtenerProducto(){
+    return this.http.get<any>(this.urlApiObtener+this.codigo);
+  }
+
+  public actualizarProducto(data:any){
+    return this.http.put(this.urlApiActualizar, data);
+  }
+
+  public eliminarProducto(codigo: number){
+    return this.http.delete(this.urlApiEliminar+codigo);
+  }
+
+
+
 }

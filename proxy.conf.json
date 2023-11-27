@@ -22,5 +22,11 @@
       "secure": false,
       "changeOrigin": true,
       "loglevel": "debug"
+    },
+    "/proveedor/*": {
+      "target": "http://localhost:8080",
+      "secure": false,
+      "changeOrigin": true,
+      "loglevel": "debug"
     }
   }

@@ -8,6 +8,7 @@ import { FormClienteComponent } from './cliente/form-cliente/form-cliente.compon
 import { FormActClienteComponent } from './cliente/form-act-cliente/form-act-cliente.component';
 import { TablaProductoComponent } from './producto/tabla-producto/tabla-producto.component';
 import { FormProductoComponent } from './producto/form-producto/form-producto.component';
+import { FormActProdComponent } from './producto/form-act-prod/form-act-prod.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'registrarCliente', component: FormClienteComponent},
   {path: 'actualizarCliente', component: FormActClienteComponent},
   {path: 'listarProducto', component: TablaProductoComponent},
-  {path: 'registrarProducto', component: FormProductoComponent}
+  {path: 'registrarProducto', component: FormProductoComponent},
+  {path: 'actualizarProducto', component: FormActProdComponent}
 ];
 
 @NgModule({

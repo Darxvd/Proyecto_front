@@ -3,6 +3,13 @@
         <form [formGroup]="frmProducto" (ngSubmit)="guardarProducto()">
             <div>
                 <label class="form-label">
+                    Codigo
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese codigo" name="id_producto"
+                formControlName="id_producto" readonly>
+            </div>
+            <div>
+                <label class="form-label">
                     Descripcion
                 </label>
                 <input type="text" class="form-control" placeholder="Ingrese Descripcion" name="des_producto"
@@ -44,3 +51,4 @@
         </form>
     </div>
 </div>
+

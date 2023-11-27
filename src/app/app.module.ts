@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormActClienteComponent } from './cliente/form-act-cliente/form-act-cliente.component';
 import { TablaProductoComponent } from './producto/tabla-producto/tabla-producto.component';
 import { FormProductoComponent } from './producto/form-producto/form-producto.component';
+import { FormActProdComponent } from './producto/form-act-prod/form-act-prod.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { FormProductoComponent } from './producto/form-producto/form-producto.co
     FormClienteComponent,
     FormActClienteComponent,
     TablaProductoComponent,
-    FormProductoComponent
+    FormProductoComponent,
+    FormActProdComponent
   ],
   imports: [
     BrowserModule,

@@ -39,5 +39,16 @@ export class TablaProductoComponent implements OnInit {
     this.router.navigate(['registrarProducto']);
   }
 
+  actualizar(codigo: number){
+    this.productoService.codigo=codigo;
+    this.router.navigate(["actualizarProducto"]);
+  }
+
+  eliminar(codigo:number){
+    this.productoService.eliminarProducto(codigo).subscribe(data => {
+      this.llenarData();
+    })
+  }
+
 
 }
