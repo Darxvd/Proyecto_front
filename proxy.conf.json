@@ -29,4 +29,17 @@
       "changeOrigin": true,
       "loglevel": "debug"
     }
+    ,
+    "/cargo/*": {
+      "target": "http://localhost:8080",
+      "secure": false,
+      "changeOrigin": true,
+      "loglevel": "debug"
+    },
+    "/sexo/*": {
+      "target": "http://localhost:8080",
+      "secure": false,
+      "changeOrigin": true,
+      "loglevel": "debug"
+    }
   }

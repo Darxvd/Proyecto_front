@@ -5,6 +5,8 @@ import { EmpleadoService } from '../servicio/empleado.service';
 import { Router } from '@angular/router';
 import { CargoEntity } from '../model/cargo-entity';
 import { SexoEntity } from '../model/sexo-entity';
+import { CargoService } from '../servicio/cargo.service';
+import { SexoService } from '../servicio/sexo.service';
 
 @Component({
   selector: 'app-form-act',
@@ -12,9 +14,6 @@ import { SexoEntity } from '../model/sexo-entity';
   styleUrls: ['./form-act.component.css']
 })
 export class FormActComponent implements OnInit{
-  empleado: EmpleadoEntity = new EmpleadoEntity();
-  cargo: CargoEntity = new CargoEntity();
-  sexo: SexoEntity = new SexoEntity();
 
   frmEmpleado = new FormGroup({
     id_empleado: new FormControl(''),
@@ -27,11 +26,16 @@ export class FormActComponent implements OnInit{
     id_cargo: new FormControl(''),
   })
 
+  empleado: EmpleadoEntity = new EmpleadoEntity();
+  cargos: CargoEntity[] = []
+  sexos: SexoEntity[] = []
 
-  constructor(private empleadoService: EmpleadoService, private router: Router){}
+  constructor(private empleadoService: EmpleadoService, private router: Router,private sexoService: SexoService, private cargoService: CargoService){}
 
   ngOnInit(): void {
     this.llenarData();
+    this.llenarCargo();
+    this.llenarSexo();
   }
 
   llenarData() {
@@ -55,6 +59,18 @@ export class FormActComponent implements OnInit{
       this.frmEmpleado.reset();
       this.router.navigate(['listarEmpleado']);
       console.log(data);
+    })
+  }
+
+  llenarSexo(){
+    this.sexoService.getSexo().subscribe(data=>{
+      this.sexos=data;
+    })
+  }
+
+  llenarCargo(){
+    this.cargoService.getCargo().subscribe(data=>{
+      this.cargos=data;
     })
   }
 

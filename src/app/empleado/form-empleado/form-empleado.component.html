@@ -28,8 +28,7 @@
                 </label>
                 <select name="id_sexo" class="form-control" formControlName="id_sexo">
                     <option value="0">Seleccione el sexo</option>
-                    <option value="1">Masculino</option>
-                    <option value="2">Femenino</option>
+                    <option *ngFor="let sexo of sexos" [value]="sexo.id_sexo">{{ sexo.nom_sexo }}</option>
                 </select>
             </div>
             <div>
@@ -52,10 +51,7 @@
                 </label>
                 <select name="id_cargo" class="form-control" formControlName="id_cargo">
                     <option value="0">Seleccione el cargo</option>
-                    <option value="1">Jefe</option>
-                    <option value="2">Supervisor</option>
-                    <option value="3">Administrador</option>
-                    <option value="4">Empleado</option>
+                    <option *ngFor="let cargo of cargos" [value]="cargo.id_cargo">{{ cargo.nom_cargo }}</option>
                 </select>
             </div>
             <button class="btn btn-primary mt-2">Guardar</button>
