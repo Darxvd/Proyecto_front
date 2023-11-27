@@ -1,35 +1,19 @@
 <div class="card">
-    <div class="card-body">
-        <form [formGroup]="frmCliente" (ngSubmit)="guardarCliente()">
-            <div>
-                <label class="form-label">
-                    codigo
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese codigo" name="id_cliente"
-                formControlName="id_cliente" readonly>
+    <div class="card-body d-flex justify-content-center">
+        <form [formGroup]="frmCliente" (ngSubmit)="guardarCliente()" class="text-center">
+            <div class="mb-3">
+                <label class="form-label">Cliente</label>
+                <input type="text" class="form-control" placeholder="Ingrese cliente" name="noap_cliente" formControlName="noap_cliente">
             </div>
-            <div>
-                <label class="form-label">
-                    Cliente
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese cliente" name="noap_cliente"
-                formControlName="noap_cliente">
+            <div class="mb-3">
+                <label class="form-label">DNI</label>
+                <input type="text" class="form-control" placeholder="Ingrese DNI" name="dni_cliente" formControlName="dni_cliente">
             </div>
-            <div>
-                <label class="form-label">
-                    Dni
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese dni" name="dni_cliente"
-                formControlName="dni_cliente">
+            <div class="mb-3">
+                <label class="form-label">Teléfono</label>
+                <input type="text" class="form-control" placeholder="Ingrese teléfono" name="tlf_cliente" formControlName="tlf_cliente">
             </div>
-            <div>
-                <label class="form-label">
-                    Telefono
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese direccion" name="tlf_cliente"
-                formControlName="tlf_cliente">
-            </div>
-            <button class="btn btn-primary mt-2">Guardar</button>
+            <button class="btn btn-primary mt-3">Guardar</button>
         </form>
     </div>
 </div>

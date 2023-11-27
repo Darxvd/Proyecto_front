@@ -1,18 +1,19 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Codigo</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
-            <th scope="col">Edad</th>
-            <th scope="col">Sexo</th>
-            <th scope="col">Dni</th>
-            <th scope="col">Direccion</th>
-            <th scope="col">Cargo</th>
-            <th scope="col">Acciones</th>
-        </tr>  
-    </thead>
-    <tbody>
+<div class="container">
+    <table class="table mx-auto mt-0">
+        <thead>
+            <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Dni</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Cargo</th>
+                <th scope="col">Acciones</th>
+            </tr>  
+        </thead>
+        <tbody>
             <tr *ngFor="let elemento of data">
                 <th scope="row">{{elemento.id_empleado}}</th>
                 <td>{{elemento.nom_empleado}}</td>
@@ -27,7 +28,9 @@
                     <button class="btn btn-danger" (click)="eliminar(elemento.id_empleado)">Eliminar</button>
                 </td>
             </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="nuevo()">Nuevo Empleado</button>
+</div>
 
-<button class="btn btn-primary" (click)="nuevo()">Nuevo Empleado</button>
+

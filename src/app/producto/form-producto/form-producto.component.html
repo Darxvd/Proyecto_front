@@ -1,28 +1,28 @@
 <div class="card">
-    <div class="card-body">
-        <form [formGroup]="frmProducto" (ngSubmit)="guardarProducto()">
-            <div>
+    <div class="card-body d-flex justify-content-center">
+        <form [formGroup]="frmProducto" (ngSubmit)="guardarProducto()" class="text-center">
+            <div class="mb-3">
                 <label class="form-label">
                     Descripcion
                 </label>
                 <input type="text" class="form-control" placeholder="Ingrese Descripcion" name="des_producto"
                 formControlName="des_producto">
             </div>
-            <div>
+            <div class="mb-3">
                 <label class="form-label">
                     Precio
                 </label>
                 <input type="text" class="form-control" placeholder="Ingrese Precio" name="pre_producto"
                 formControlName="pre_producto">
             </div>
-            <div>
+            <div class="mb-3">
                 <label class="form-label">
                     Stock
                 </label>
                 <input type="text" class="form-control" placeholder="Ingrese Stock" name="stk_producto"
                 formControlName="stk_producto">
             </div>
-            <div>
+            <div class="mb-3">
                 <label class="form-label">
                     Categoria
                 </label>
@@ -31,7 +31,7 @@
                     <option *ngFor="let categoria of categorias" [value]="categoria.id_categoria">{{ categoria.nom_categoria }}</option>
                 </select>
             </div>
-            <div>
+            <div class="mb-3">
                 <label class="form-label">
                     Proveedor
                 </label>
@@ -44,3 +44,4 @@
         </form>
     </div>
 </div>
+

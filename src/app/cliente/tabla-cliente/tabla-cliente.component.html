@@ -1,4 +1,5 @@
-<table class="table">
+<div class="container">
+    <table class="table mx-auto mt-0">
     <thead>
         <tr>
             <th scope="col">Codigo</th>
@@ -15,11 +16,12 @@
                 <td>{{elemento.dni_cliente}}</td>
                 <td >{{elemento.tlf_cliente}}</td>
                 <td>
-                    <button class="btn btn-primary m-2"  (click)="actualizar(elemento.id_cliente)">Actualizar</button>
-                    <button class="btn btn-danger" (click)="eliminar(elemento.id_cliente)">Eliminar</button>
+                    <button class="btn btn-primary mr-2" (click)="actualizar(elemento.id_cliente)">Actualizar</button>
+                    <button class="btn btn-danger m-2" (click)="eliminar(elemento.id_cliente)">Eliminar</button>
                 </td>
             </tr>
     </tbody>
 </table>
 <button class="btn btn-primary" (click)="nuevo()">Nuevo Cliente</button>
+</div>
 

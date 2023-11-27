@@ -1,0 +1,7 @@
+.custom-logo img {
+    max-height: 50px; /* Ajusta el valor según sea necesario */
+    width: auto; /* Esto asegura que el ancho se ajuste proporcionalmente */
+}
+.bg-custom {
+    background-color: #808080; /* Cambia este valor al color de gris que desees */
+}
