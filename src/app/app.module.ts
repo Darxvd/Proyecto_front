@@ -13,6 +13,9 @@ import { FormActClienteComponent } from './cliente/form-act-cliente/form-act-cli
 import { TablaProductoComponent } from './producto/tabla-producto/tabla-producto.component';
 import { FormProductoComponent } from './producto/form-producto/form-producto.component';
 import { FormActProdComponent } from './producto/form-act-prod/form-act-prod.component';
+import { TablaProveedirComponent } from './proveedor/tabla-proveedir/tabla-proveedir.component';
+import { FormProveedorComponent } from './proveedor/form-proveedor/form-proveedor.component';
+import { FormActProveedorComponent } from './proveedor/form-act-proveedor/form-act-proveedor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,10 @@ import { FormActProdComponent } from './producto/form-act-prod/form-act-prod.com
     FormActClienteComponent,
     TablaProductoComponent,
     FormProductoComponent,
-    FormActProdComponent
+    FormActProdComponent,
+    TablaProveedirComponent,
+    FormProveedorComponent,
+    FormActProveedorComponent
   ],
   imports: [
     BrowserModule,
