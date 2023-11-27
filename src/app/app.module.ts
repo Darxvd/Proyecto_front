@@ -10,6 +10,8 @@ import { TablaClienteComponent } from './cliente/tabla-cliente/tabla-cliente.com
 import { FormClienteComponent } from './cliente/form-cliente/form-cliente.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormActClienteComponent } from './cliente/form-act-cliente/form-act-cliente.component';
+import { TablaProductoComponent } from './producto/tabla-producto/tabla-producto.component';
+import { FormProductoComponent } from './producto/form-producto/form-producto.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { FormActClienteComponent } from './cliente/form-act-cliente/form-act-cli
     FormActComponent,
     TablaClienteComponent,
     FormClienteComponent,
-    FormActClienteComponent
+    FormActClienteComponent,
+    TablaProductoComponent,
+    FormProductoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Proveedor</th>
+            <th scope="col">Acciones</th>
+        </tr>  
+    </thead>
+    <tbody>
+            <tr *ngFor="let elemento of data">
+                <th scope="row">{{elemento.id_producto}}</th>
+                <td>{{elemento.des_producto}}</td>
+                <td>{{elemento.pre_producto}}</td>
+                <td>{{elemento.stk_producto}}</td>
+                <td>{{elemento.objcategoria.nom_categoria}}</td>
+                <td>{{elemento.objProveedor.nom_proveedor}}</td>
+                <td>
+                </td>
+            </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" (click)="nuevo()">Nuevo Producto</button>
