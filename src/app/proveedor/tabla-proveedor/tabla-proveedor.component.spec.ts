@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TablaProveedirComponent } from './tabla-proveedir.component';
+import { TablaProveedorComponent } from './tabla-proveedor.component';
 
 describe('TablaProveedirComponent', () => {
-  let component: TablaProveedirComponent;
-  let fixture: ComponentFixture<TablaProveedirComponent>;
+  let component: TablaProveedorComponent;
+  let fixture: ComponentFixture<TablaProveedorComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TablaProveedirComponent]
+      declarations: [TablaProveedorComponent]
     });
-    fixture = TestBed.createComponent(TablaProveedirComponent);
+    fixture = TestBed.createComponent(TablaProveedorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

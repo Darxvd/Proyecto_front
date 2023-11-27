@@ -13,7 +13,7 @@ import { FormActClienteComponent } from './cliente/form-act-cliente/form-act-cli
 import { TablaProductoComponent } from './producto/tabla-producto/tabla-producto.component';
 import { FormProductoComponent } from './producto/form-producto/form-producto.component';
 import { FormActProdComponent } from './producto/form-act-prod/form-act-prod.component';
-import { TablaProveedirComponent } from './proveedor/tabla-proveedir/tabla-proveedir.component';
+import { TablaProveedorComponent } from './proveedor/tabla-proveedor/tabla-proveedor.component';
 import { FormProveedorComponent } from './proveedor/form-proveedor/form-proveedor.component';
 import { FormActProveedorComponent } from './proveedor/form-act-proveedor/form-act-proveedor.component';
 @NgModule({
@@ -28,7 +28,7 @@ import { FormActProveedorComponent } from './proveedor/form-act-proveedor/form-a
     TablaProductoComponent,
     FormProductoComponent,
     FormActProdComponent,
-    TablaProveedirComponent,
+    TablaProveedorComponent,
     FormProveedorComponent,
     FormActProveedorComponent
   ],

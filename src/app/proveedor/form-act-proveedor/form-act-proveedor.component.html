@@ -1,1 +1,21 @@
-<p>form-act-proveedor works!</p>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="frmProveedor" (ngSubmit)="guardarProveedor()">
+            <div>
+                <label class="form-label">
+                    codigo
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese codigo" name="id_proveedor"
+                formControlName="id_proveedor" readonly>
+            </div>
+            <div>
+                <label class="form-label">
+                    Proveedor
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese proveedor" name="nom_proveedor"
+                formControlName="nom_proveedor">
+            </div>
+            <button class="btn btn-primary mt-2">Guardar</button>
+        </form>
+    </div>
+</div>
