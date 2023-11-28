@@ -20,7 +20,8 @@
                 <td>{{elemento.objcategoria.nom_categoria}}</td>
                 <td>{{elemento.objProveedor.nom_proveedor}}</td>
                 <td>
-                    <button class="btn btn-primary m-2" (click)="actualizar(elemento.id_producto)">Actualizar</button>
+                    <button class="btn btn-warning" (click)="actualizar(elemento.id_producto)">Actualizar</button>
+                    &nbsp;
                     <button class="btn btn-danger" (click)="eliminar(elemento.id_producto)">Eliminar</button>
                 </td>
             </tr>

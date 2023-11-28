@@ -1,1 +1,21 @@
-<p>tabla-proveedir works!</p>
+<div class="container">
+    <table class="table mx-auto mt-0" >
+        <thead>
+            <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Proveedor</th>
+                <th scope="col">Acciones</th>
+            </tr>  
+        </thead>
+        <tbody>
+            <tr *ngFor="let elemento of data">
+                <th scope="row">{{elemento.id_proveedor}}</th>
+                <td>{{elemento.nom_proveedor}}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="actualizar(elemento.id_proveedor)">Actualizar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="nuevo()">Nuevo Proveedor</button>
+</div>

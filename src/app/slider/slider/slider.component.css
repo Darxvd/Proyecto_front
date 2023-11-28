@@ -1,0 +1,10 @@
+ /* Establece una altura fija para las imágenes en el carousel */
+ #carouselExampleIndicators img {
+    height: 500px;
+    width: 600px;
+  }
+
+  /* Agrega un espacio en la parte superior del carousel */
+  #carouselExampleIndicators {
+    margin-top: 0px;
+  }

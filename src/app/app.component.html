@@ -1,28 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-  <div class="container-fluid">
-      <!-- Reemplaza el texto "Logo" con tu imagen -->
-      <a class="navbar-brand custom-logo" href="#"><img src="assets/img/logo.png" alt=""></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary d-flex justify-content-center">
+    <!-- Reemplaza el texto "Logo" con tu imagen -->
+    <a class="navbar-brand custom-logo" href="home"><img src="assets/img/logo.png" alt=""></a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="listarEmpleado">Empleado</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="listarCliente">Cliente</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="listarProducto">Producto</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="listarProveedor">Proveedor</a>
-              </li>
-          </ul>
-      </div>
-  </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="nav">
+        <li class="nav-item ms-5 me-5">
+            <a class="nav-link active text-white" aria-current="page" href="listarEmpleado">Empleado</a>
+        </li>
+        <li class="nav-item ms-5 me-5">
+            <a class="nav-link active text-white" aria-current="page" href="listarCliente">Cliente</a>
+        </li>
+        <li class="nav-item ms-5 me-5">
+            <a class="nav-link active text-white" aria-current="page" href="listarProducto">Producto</a>
+        </li>
+        <li class="nav-item ms-5 me-5">
+            <a class="nav-link active text-white" aria-current="page" href="listarProveedor">Proveedor</a>
+        </li>
+        <li class="nav-item ms-5 me-5">
+            <a class="nav-link active text-white" aria-current="page" href="#">Boleta</a>
+        </li>
+    </ul>
 </nav>
 <router-outlet></router-outlet>

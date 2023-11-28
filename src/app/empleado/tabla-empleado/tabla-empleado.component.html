@@ -24,7 +24,8 @@
                 <td>{{elemento.dir_empleado}}</td>
                 <td>{{elemento.objCargo.nom_cargo}}</td>
                 <td>
-                    <button class="btn btn-primary m-2" (click)="actualizar(elemento.id_empleado)">Actualizar</button>
+                    <button class="btn btn-warning" (click)="actualizar(elemento.id_empleado)">Actualizar</button>
+                    &nbsp;
                     <button class="btn btn-danger" (click)="eliminar(elemento.id_empleado)">Eliminar</button>
                 </td>
             </tr>

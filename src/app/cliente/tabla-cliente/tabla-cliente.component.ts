@@ -47,4 +47,12 @@ export class TablaClienteComponent implements OnInit {
     })
   }
 
+  guardarCliente(){
+    console.log(this.frmCliente.value);
+    this.clienteService.guardarDataCliente(this.frmCliente.value).subscribe(res => {
+      console.log(res);
+      this.frmCliente.reset();
+      this.router.navigate(['listarCliente']);
+    })
+  }
 }

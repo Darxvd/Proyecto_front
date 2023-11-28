@@ -16,6 +16,8 @@ import { FormActProdComponent } from './producto/form-act-prod/form-act-prod.com
 import { TablaProveedirComponent } from './proveedor/tabla-proveedir/tabla-proveedir.component';
 import { FormProveedorComponent } from './proveedor/form-proveedor/form-proveedor.component';
 import { FormActProveedorComponent } from './proveedor/form-act-proveedor/form-act-proveedor.component';
+import { SliderComponent } from './slider/slider/slider.component';
+import { FooterComponent } from './slider/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { FormActProveedorComponent } from './proveedor/form-act-proveedor/form-a
     FormActProdComponent,
     TablaProveedirComponent,
     FormProveedorComponent,
-    FormActProveedorComponent
+    FormActProveedorComponent,
+    SliderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
