@@ -1,44 +1,40 @@
 <div class="card">
     <div class="card-body d-flex justify-content-center">
         <form [formGroup]="frmProducto" (ngSubmit)="guardarProducto()" class="text-center">
-            <div class="mb-3">
-                <label class="form-label">
-                    Descripcion
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese Descripcion" name="des_producto"
-                formControlName="des_producto">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Descripcion</label>
+                    <input type="text" class="form-control" placeholder="Ingrese Descripcion" name="des_producto"
+                           formControlName="des_producto">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Precio</label>
+                    <input type="text" class="form-control" placeholder="Ingrese Precio" name="pre_producto"
+                           formControlName="pre_producto">
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Precio
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese Precio" name="pre_producto"
-                formControlName="pre_producto">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Stock</label>
+                    <input type="text" class="form-control" placeholder="Ingrese Stock" name="stk_producto"
+                           formControlName="stk_producto">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Categoria</label>
+                    <select name="id_categoria" class="form-control" formControlName="id_categoria">
+                        <option value="0">Seleccione la categoria</option>
+                        <option *ngFor="let categoria of categorias" [value]="categoria.id_categoria">{{ categoria.nom_categoria }}</option>
+                    </select>
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Stock
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese Stock" name="stk_producto"
-                formControlName="stk_producto">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Categoria
-                </label>
-                <select name="id_categoria" class="form-control" formControlName="id_categoria">
-                    <option value="0">Seleccione la categoria</option>
-                    <option *ngFor="let categoria of categorias" [value]="categoria.id_categoria">{{ categoria.nom_categoria }}</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Proveedor
-                </label>
-                <select name="id_proveedor" class="form-control" formControlName="id_proveedor">
-                    <option value="0">Seleccione el proveedor</option>
-                    <option *ngFor="let proveedor of proveedors" [value]="proveedor.id_proveedor">{{ proveedor.nom_proveedor}}</option>
-                </select>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Proveedor</label>
+                    <select name="id_proveedor" class="form-control" formControlName="id_proveedor">
+                        <option value="0">Seleccione el proveedor</option>
+                        <option *ngFor="let proveedor of proveedors" [value]="proveedor.id_proveedor">{{ proveedor.nom_proveedor}}</option>
+                    </select>
+                </div>
             </div>
             <button class="btn btn-primary mt-2">Guardar</button>
         </form>

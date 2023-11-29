@@ -55,4 +55,19 @@ export class TablaClienteComponent implements OnInit {
       this.router.navigate(['listarCliente']);
     })
   }
+
+  buscarCliente(){
+    const cliente = this.frmCliente.controls['noap_cliente'].value!;
+    this.clienteService.clientes = "" + cliente;
+    if(cliente == ""){
+      this.llenarData();
+    }
+    else{
+      this.clienteService.buscarCliente("" + cliente).subscribe(data=>{
+        this.data = data;
+      }
+      );
+    }
+  }
+
 }

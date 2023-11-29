@@ -59,4 +59,21 @@ export class TablaEmpleadoComponent implements OnInit{
     })
   }
 
+  buscarNombre(){
+    console.log();
+    const nombre = this.frmEmpleado.controls['nom_empleado'].value!;
+    this.empleadoService.nombre = "" + nombre;
+    if(nombre == ""){
+      this.llenarData();
+    }
+    else{
+      this.empleadoService.buscarNombre("" + nombre).subscribe(data=>{
+        this.data = data
+        this.empleadoArray = this.data;
+        console.log(data);
+      }
+      );
+    }
+  }
+
 }

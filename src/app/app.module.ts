@@ -18,6 +18,7 @@ import { FormProveedorComponent } from './proveedor/form-proveedor/form-proveedo
 import { FormActProveedorComponent } from './proveedor/form-act-proveedor/form-act-proveedor.component';
 import { SliderComponent } from './slider/slider/slider.component';
 import { FooterComponent } from './slider/footer/footer.component';
+import { BodComponent } from './slider/bod/bod.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { FooterComponent } from './slider/footer/footer.component';
     FormProveedorComponent,
     FormActProveedorComponent,
     SliderComponent,
-    FooterComponent
+    FooterComponent,
+    BodComponent
   ],
   imports: [
     BrowserModule,

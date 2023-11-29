@@ -5,3 +5,9 @@
 .bg-custom {
     background-color: #808080; /* Cambia este valor al color de gris que desees */
 }
+@media (min-width: 990px) {
+    .navbar-nav .nav-item {
+        background-color: transparent !important;
+    }
+}
+

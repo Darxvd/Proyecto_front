@@ -8,11 +8,13 @@ import { Observable } from 'rxjs';
 export class ProductoService {
 
   codigo = 0;
+  categoria = 0;
   private urlApiListar='producto/listar';
   private urlApiPost='producto/registrar';
   private urlApiActualizar='producto/actualizar';
   private urlApiObtener='producto/obtener/';
   private urlApiEliminar='producto/eliminar/'
+  private urlApiFiltro='producto/listarXcategoria/';
 
   constructor(private http: HttpClient) { }
 
@@ -35,7 +37,11 @@ export class ProductoService {
   public eliminarProducto(codigo: number){
     return this.http.delete(this.urlApiEliminar+codigo);
   }
-
-
-
+  public buscarCategoria(categoria: number) {
+  if (categoria === 0) {
+    return this.http.get<any>(this.urlApiListar);
+  } else {
+    return this.http.get<any>(this.urlApiFiltro + categoria); 
+  }
+  }
 }

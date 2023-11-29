@@ -1,61 +1,56 @@
 <div class="card">
     <div class="card-body d-flex justify-content-center">
         <form [formGroup]="frmEmpleado" (ngSubmit)="guardarEmpleado()" class="text-center">
-            <div class="mb-3">
-                <label class="form-label">
-                    Nombres
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese nombre" name="nom_empleado"
-                formControlName="nom_empleado">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Nombres</label>
+                    <input type="text" class="form-control" placeholder="Ingrese nombre" name="nom_empleado" formControlName="nom_empleado">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" placeholder="Ingrese apellido" name="apl_empleado" formControlName="apl_empleado">
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Apellidos
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese apellido" name="apl_empleado"
-                formControlName="apl_empleado">
+            
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Edad</label>
+                    <input type="text" class="form-control" placeholder="Ingrese edad" name="edad_empleado" formControlName="edad_empleado">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Sexo</label>
+                    <select name="id_sexo" class="form-control" formControlName="id_sexo">
+                        <option value="0">Seleccione el sexo</option>
+                        <option *ngFor="let sexo of sexos" [value]="sexo.id_sexo">{{ sexo.nom_sexo }}</option>
+                    </select>
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Edad
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese edad" name="edad_empleado" 
-                formControlName="edad_empleado">
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Dni</label>
+                    <input type="text" class="form-control" placeholder="Ingrese dni" name="dni_empleado" formControlName="dni_empleado">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Direccion</label>
+                    <input type="text" class="form-control" placeholder="Ingrese direccion" name="dir_empleado" formControlName="dir_empleado">
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Sexo
-                </label>
-                <select name="id_sexo" class="form-control" formControlName="id_sexo">
-                    <option value="0">Seleccione el sexo</option>
-                    <option *ngFor="let sexo of sexos" [value]="sexo.id_sexo">{{ sexo.nom_sexo }}</option>
-                </select>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Cargo</label>
+                    <select name="id_cargo" class="form-control" formControlName="id_cargo">
+                        <option value="0">Seleccione el cargo</option>
+                        <option *ngFor="let cargo of cargos" [value]="cargo.id_cargo">{{ cargo.nom_cargo }}</option>
+                    </select>
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Dni
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese dni" name="dni_empleado"
-                formControlName="dni_empleado">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Direccion
-                </label>
-                <input type="text" class="form-control" placeholder="Ingrese direccion" name="dir_empleado"
-                formControlName="dir_empleado">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">
-                    Cargo
-                </label>
-                <select name="id_cargo" class="form-control" formControlName="id_cargo">
-                    <option value="0">Seleccione el cargo</option>
-                    <option *ngFor="let cargo of cargos" [value]="cargo.id_cargo">{{ cargo.nom_cargo }}</option>
-                </select>
-            </div>
+
             <button class="btn btn-primary mt-2">Guardar</button>
         </form>
     </div>
 </div>
+
+
 

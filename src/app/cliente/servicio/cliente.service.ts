@@ -8,12 +8,13 @@ import { Observable } from 'rxjs/internal/Observable';
 export class ClienteService {
 
   codigo = 0;
-
+  clientes = '';
   private urlApi='cliente/listar';
   private urlApiPost='cliente/registrar';
   private urlApiActualizar='cliente/actualizar';
   private urlApiObtener='cliente/obtener/';
   private urlApiEliminar='cliente/eliminar/'
+  private urlApiFiltro='cliente/listarClientes/'
 
   constructor(private http: HttpClient) { }
 
@@ -35,5 +36,9 @@ export class ClienteService {
 
   public eliminarCliente(codigo: number){
     return this.http.delete(this.urlApiEliminar+codigo);
+  }
+
+  public buscarCliente(cliente:string) {
+    return this.http.get<any>(this.urlApiFiltro + cliente);
   }
 }

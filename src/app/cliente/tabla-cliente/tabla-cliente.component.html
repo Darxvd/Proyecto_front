@@ -1,28 +1,39 @@
-<div class="container">
-    <table class="table mx-auto mt-0">
+<div class="card" style="margin: auto;">
+    <form [formGroup]="frmCliente" (ngSubmit)="buscarCliente()" class="p-3 d-flex align-items-start">
+        <div class="flex-grow-1">
+            <label class="form-label">
+                Busqueda por Nombres
+            </label>
+            <input type="text" class="form-control" name="noap_cliente" placeholder="Ingrese clientes" formControlName="noap_cliente">
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary ml-1 align-self-end">Buscar</button>
+    </form>
+    <div style="text-align: center;margin-bottom: 5px; padding: 10px;">
+        <button class="btn btn-primary" (click)="nuevo()">Nuevo Cliente</button>
+    </div>
+</div>
+<table class="table" style="text-align:center;color:lightgray;">
     <thead>
         <tr>
-            <th scope="col">Codigo</th>
-            <th scope="col">Cliente</th>
-            <th scope="col">Dni</th>
-            <th scope="col">Telefono</th>
-            <th scope="col">Acciones</th>
-        </tr>  
+            <th>Codigo</th>
+            <th>Cliente</th>
+            <th>Dni</th>
+            <th>Telefono</th>
+            <th>Acciones</th>
+        </tr>
     </thead>
     <tbody>
-            <tr *ngFor="let elemento of data">
-                <th scope="row">{{elemento.id_cliente}}</th>
-                <td>{{elemento.noap_cliente}}</td>
-                <td>{{elemento.dni_cliente}}</td>
-                <td >{{elemento.tlf_cliente}}</td>
-                <td>
-                    <button class="btn btn-warning" (click)="actualizar(elemento.id_cliente)">Actualizar</button>
-                    &nbsp;
-                    <button class="btn btn-danger" (click)="eliminar(elemento.id_cliente)">Eliminar</button>
-                </td>
-            </tr>
+        <tr *ngFor="let elemento of data">
+            <th scope="row">{{elemento.id_cliente}}</th>
+            <td>{{elemento.noap_cliente}}</td>
+            <td>{{elemento.dni_cliente}}</td>
+            <td>{{elemento.tlf_cliente}}</td>
+            <td>
+                <button class="btn btn-warning" (click)="actualizar(elemento.id_cliente)">Actualizar</button>
+                &nbsp;
+                <button class="btn btn-danger" (click)="eliminar(elemento.id_cliente)">Eliminar</button>
+            </td>
+        </tr>
     </tbody>
 </table>
-<button class="btn btn-primary" (click)="nuevo()">Nuevo Cliente</button>
-</div>
-
